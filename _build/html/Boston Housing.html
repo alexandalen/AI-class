@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Boston Housing &#8212; 我的機器學習歷程</title>
+    <title>Boston Housing &#8212; 我的AI學習歷程</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
@@ -37,6 +37,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="方程式語法 (Input)" href="Equations_input.html" />
     <link rel="prev" title="Content with notebooks" href="notebooks.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -59,7 +60,7 @@
   <img src="_static/logo.png" class="logo" alt="logo">
   
   
-  <h1 class="site-logo" id="site-title">我的機器學習歷程</h1>
+  <h1 class="site-logo" id="site-title">我的AI學習歷程</h1>
   
 </a>
 </div>
@@ -86,6 +87,16 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Boston Housing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Equations_input.html">
+   方程式語法 (Input)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Equations_tkinter.html">
+   方程式語法 (tkinter)
   </a>
  </li>
 </ul>
@@ -486,7 +497,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>21.90052770448553
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22.941952506596333
 </pre></div>
 </div>
 </div>
@@ -498,9 +509,9 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-0.97953222,  0.90515898,  0.14590394,  0.80374372, -2.14731167,
-        2.4343344 ,  0.01664806, -3.16349343,  2.27289119, -1.67472906,
-       -1.9247232 ,  1.06391683, -3.99020586])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-1.10859803,  1.04882513, -0.09048815,  0.74954382, -2.06686263,
+        2.75582544, -0.23231627, -3.41196719,  2.93107351, -1.85353032,
+       -2.14043567,  0.91722271, -3.73620038])
 </pre></div>
 </div>
 </div>
@@ -519,7 +530,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.73195474583652
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.7422996065107937
 </pre></div>
 </div>
 </div>
@@ -532,7 +543,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 6,  2,  3,  1,  0, 11,  9, 10,  4,  8,  5,  7, 12], dtype=int64)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 2,  6,  3, 11,  1,  0,  9,  4, 10,  5,  8,  7, 12], dtype=int64)
 </pre></div>
 </div>
 </div>
@@ -545,7 +556,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([24.28942837, 17.16168536, 11.20852194])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([10.10353947, 19.61979781, 19.26149145])
 </pre></div>
 </div>
 </div>
@@ -558,7 +569,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22.037162832567454
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>19.210554399604362
 </pre></div>
 </div>
 </div>
@@ -570,7 +581,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.73195474583652
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.7422996065107937
 </pre></div>
 </div>
 </div>
@@ -606,6 +617,7 @@ dtype: int64
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="notebooks.html" title="previous page">Content with notebooks</a>
+    <a class='right-next' id="next-link" href="Equations_input.html" title="next page">方程式語法 (Input)</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

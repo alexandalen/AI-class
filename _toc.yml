@@ -4,3 +4,5 @@
     - file: markdown
     - file: notebooks
 - file: Boston Housing
+- file: Equations_input
+- file: Equations_tkinter
