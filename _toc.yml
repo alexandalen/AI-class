@@ -6,3 +6,17 @@
 - file: Boston Housing
 - file: Equations_input
 - file: Equations_tkinter
+- file: Cat_Classification
+- file: classfication_Wine
+- file: Keras_fashion_minst辨識
+- file: multioutput_face_completion
+- file: Regression_Boston housing
+- file: ROC_AUC for Breast Cancer prediction
+- file: Titanic_survive_prediction
+- file: 行銷活動目標客戶分析
+- file: 特徵工程_breast cancer PCA
+- file: 特徵工程_Titanic PCA
+- file: 假設檢定
+- file: Titanic_predict_streamlit
+- file: model
+- file: std
