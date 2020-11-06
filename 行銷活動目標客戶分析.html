@@ -1,0 +1,2460 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>行銷活動目標客戶分析 &#8212; 我的AI學習歷程檔案</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-dropdown.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="breast cancer PCA and 分布圖" href="特徵工程_breast cancer PCA.html" />
+    <link rel="prev" title="Titanic survive prediction" href="Titanic_survive_prediction.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">我的AI學習歷程檔案</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="content.html">
+   Content in Jupyter Book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Boston Housing.html">
+   Boston Housing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Equations_input.html">
+   方程式語法 (Input)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Equations_tkinter.html">
+   方程式語法 (tkinter)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Cat_Classification.html">
+   Cat_Classification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="classfication_Wine.html">
+   classfication_Wine
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Keras_fashion_minst辨識.html">
+   Keras_fashion_minst辨識
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="multioutput_face_completion.html">
+   multioutput_face_completion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="multioutput_face_completion.html#id1">
+   繪製完整臉譜
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Regression_Boston housing.html">
+   Boston 房價預測
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ROC_AUC for Breast Cancer prediction.html">
+   ROC_AUC for Breast Cancer predtction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ROC_AUC for Breast Cancer prediction.html#confusion-matrix">
+   confusion matrix
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ROC_AUC for Breast Cancer prediction.html#roc-curve">
+   ROC curve
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Titanic_survive_prediction.html">
+   Titanic survive prediction
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   行銷活動目標客戶分析
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="#the-p-values-for-one-variable-is-very-high-therefore-we-will-remove-them">
+   The p-values for one variable is very high, therefore, we will remove them.
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="#logistic-regression-model-fitting">
+   Logistic Regression Model Fitting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="#confusion-matrix">
+   Confusion matrix
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="#roc-curve">
+   ROC curve
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="特徵工程_breast cancer PCA.html">
+   breast cancer PCA and 分布圖
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="特徵工程_Titanic PCA.html">
+   Titanic PCA and 分布圖
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="假設檢定.html">
+   假設檢定 (美國總統身高比較)
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/行銷活動目標客戶分析.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/行銷活動目標客戶分析.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/行銷活動目標客戶分析.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="id1">
+<h1>行銷活動目標客戶分析<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">preprocessing</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s2">&quot;font&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">&quot;whitegrid&quot;</span><span class="p">,</span> <span class="n">color_codes</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./banking.csv&#39;</span><span class="p">)</span>
+<span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="c1">#print (data)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">5467</span><span class="n">fe08fdfd</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./banking.csv&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1">#print (data)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="nn">C:\ProgramData\Anaconda3\lib\site-packages\pandas\io\parsers.py</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, dialect, error_bad_lines, warn_bad_lines, delim_whitespace, low_memory, memory_map, float_precision)</span>
+<span class="g g-Whitespace">    </span><span class="mi">684</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">685</span> 
+<span class="ne">--&gt; </span><span class="mi">686</span>     <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">687</span> 
+<span class="g g-Whitespace">    </span><span class="mi">688</span> 
+
+<span class="nn">C:\ProgramData\Anaconda3\lib\site-packages\pandas\io\parsers.py</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">450</span> 
+<span class="g g-Whitespace">    </span><span class="mi">451</span>     <span class="c1"># Create the parser.</span>
+<span class="ne">--&gt; </span><span class="mi">452</span>     <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">fp_or_buf</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">453</span> 
+<span class="g g-Whitespace">    </span><span class="mi">454</span>     <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
+
+<span class="nn">C:\ProgramData\Anaconda3\lib\site-packages\pandas\io\parsers.py</span> in <span class="ni">__init__</span><span class="nt">(self, f, engine, **kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">944</span>             <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">945</span> 
+<span class="ne">--&gt; </span><span class="mi">946</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">947</span> 
+<span class="g g-Whitespace">    </span><span class="mi">948</span>     <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<span class="nn">C:\ProgramData\Anaconda3\lib\site-packages\pandas\io\parsers.py</span> in <span class="ni">_make_engine</span><span class="nt">(self, engine)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1176</span>     <span class="k">def</span> <span class="nf">_make_engine</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;c&quot;</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1177</span>         <span class="k">if</span> <span class="n">engine</span> <span class="o">==</span> <span class="s2">&quot;c&quot;</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1178</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="n">CParserWrapper</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1179</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1180</span>             <span class="k">if</span> <span class="n">engine</span> <span class="o">==</span> <span class="s2">&quot;python&quot;</span><span class="p">:</span>
+
+<span class="nn">C:\ProgramData\Anaconda3\lib\site-packages\pandas\io\parsers.py</span> in <span class="ni">__init__</span><span class="nt">(self, src, **kwds)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2006</span>         <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;usecols&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">usecols</span>
+<span class="g g-Whitespace">   </span><span class="mi">2007</span> 
+<span class="ne">-&gt; </span><span class="mi">2008</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span> <span class="o">=</span> <span class="n">parsers</span><span class="o">.</span><span class="n">TextReader</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2009</span>         <span class="bp">self</span><span class="o">.</span><span class="n">unnamed_cols</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span><span class="o">.</span><span class="n">unnamed_cols</span>
+<span class="g g-Whitespace">   </span><span class="mi">2010</span> 
+
+<span class="nn">pandas\_libs\parsers.pyx</span> in <span class="ni">pandas._libs.parsers.TextReader.__cinit__</span><span class="nt">()</span>
+
+<span class="nn">pandas\_libs\parsers.pyx</span> in <span class="ni">pandas._libs.parsers.TextReader._setup_parser_source</span><span class="nt">()</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;./banking.csv&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>age</th>
+      <th>job</th>
+      <th>marital</th>
+      <th>education</th>
+      <th>default</th>
+      <th>housing</th>
+      <th>loan</th>
+      <th>contact</th>
+      <th>month</th>
+      <th>day_of_week</th>
+      <th>...</th>
+      <th>campaign</th>
+      <th>pdays</th>
+      <th>previous</th>
+      <th>poutcome</th>
+      <th>emp_var_rate</th>
+      <th>cons_price_idx</th>
+      <th>cons_conf_idx</th>
+      <th>euribor3m</th>
+      <th>nr_employed</th>
+      <th>y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>44</td>
+      <td>blue-collar</td>
+      <td>married</td>
+      <td>basic.4y</td>
+      <td>unknown</td>
+      <td>yes</td>
+      <td>no</td>
+      <td>cellular</td>
+      <td>aug</td>
+      <td>thu</td>
+      <td>...</td>
+      <td>1</td>
+      <td>999</td>
+      <td>0</td>
+      <td>nonexistent</td>
+      <td>1.4</td>
+      <td>93.444</td>
+      <td>-36.1</td>
+      <td>4.963</td>
+      <td>5228.1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>53</td>
+      <td>technician</td>
+      <td>married</td>
+      <td>unknown</td>
+      <td>no</td>
+      <td>no</td>
+      <td>no</td>
+      <td>cellular</td>
+      <td>nov</td>
+      <td>fri</td>
+      <td>...</td>
+      <td>1</td>
+      <td>999</td>
+      <td>0</td>
+      <td>nonexistent</td>
+      <td>-0.1</td>
+      <td>93.200</td>
+      <td>-42.0</td>
+      <td>4.021</td>
+      <td>5195.8</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>28</td>
+      <td>management</td>
+      <td>single</td>
+      <td>university.degree</td>
+      <td>no</td>
+      <td>yes</td>
+      <td>no</td>
+      <td>cellular</td>
+      <td>jun</td>
+      <td>thu</td>
+      <td>...</td>
+      <td>3</td>
+      <td>6</td>
+      <td>2</td>
+      <td>success</td>
+      <td>-1.7</td>
+      <td>94.055</td>
+      <td>-39.8</td>
+      <td>0.729</td>
+      <td>4991.6</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>39</td>
+      <td>services</td>
+      <td>married</td>
+      <td>high.school</td>
+      <td>no</td>
+      <td>no</td>
+      <td>no</td>
+      <td>cellular</td>
+      <td>apr</td>
+      <td>fri</td>
+      <td>...</td>
+      <td>2</td>
+      <td>999</td>
+      <td>0</td>
+      <td>nonexistent</td>
+      <td>-1.8</td>
+      <td>93.075</td>
+      <td>-47.1</td>
+      <td>1.405</td>
+      <td>5099.1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>55</td>
+      <td>retired</td>
+      <td>married</td>
+      <td>basic.4y</td>
+      <td>no</td>
+      <td>yes</td>
+      <td>no</td>
+      <td>cellular</td>
+      <td>aug</td>
+      <td>fri</td>
+      <td>...</td>
+      <td>1</td>
+      <td>3</td>
+      <td>1</td>
+      <td>success</td>
+      <td>-2.9</td>
+      <td>92.201</td>
+      <td>-31.4</td>
+      <td>0.869</td>
+      <td>5076.2</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 21 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>age               0
+job               0
+marital           0
+education         0
+default           0
+housing           0
+loan              0
+contact           0
+month             0
+day_of_week       0
+duration          0
+campaign          0
+pdays             0
+previous          0
+poutcome          0
+emp_var_rate      0
+cons_price_idx    0
+cons_conf_idx     0
+euribor3m         0
+nr_employed       0
+y                 0
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;education&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;basic.4y&#39;, &#39;unknown&#39;, &#39;university.degree&#39;, &#39;high.school&#39;,
+       &#39;basic.9y&#39;, &#39;professional.course&#39;, &#39;basic.6y&#39;, &#39;illiterate&#39;],
+      dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;education&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>university.degree      12168
+high.school             9515
+basic.9y                6045
+professional.course     5243
+basic.4y                4176
+basic.6y                2292
+unknown                 1731
+illiterate                18
+Name: education, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#將 basic 4y,6y,9y 群組 統稱 basic</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;education&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;education&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;basic.9y&#39;</span><span class="p">,</span> <span class="s1">&#39;Basic&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;education&#39;</span><span class="p">])</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;education&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;education&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;basic 6y&#39;</span><span class="p">,</span> <span class="s1">&#39;Basic&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;education&#39;</span><span class="p">])</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;education&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;education&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;basic 4y&#39;</span><span class="p">,</span> <span class="s1">&#39;Basic&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;education&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;education&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;basic.4y&#39;, &#39;unknown&#39;, &#39;university.degree&#39;, &#39;high.school&#39;, &#39;Basic&#39;,
+       &#39;professional.course&#39;, &#39;basic.6y&#39;, &#39;illiterate&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data exploration</span>
+<span class="c1">#y=1 (yes) y=0(no)</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    36548
+1     4640
+Name: y, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;hls&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/行銷活動目標客戶分析_11_0.png" src="_images/行銷活動目標客戶分析_11_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">No_sub</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">yes_sub</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">percent_No_sub</span><span class="o">=</span><span class="n">No_sub</span><span class="o">/</span><span class="p">(</span><span class="n">yes_sub</span><span class="o">+</span><span class="n">No_sub</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;percent of no subscription:&#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">percent_No_sub</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">percent_yes_sub</span><span class="o">=</span><span class="n">yes_sub</span><span class="o">/</span><span class="p">(</span><span class="n">yes_sub</span><span class="o">+</span><span class="n">No_sub</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;percent of yes subscription:&#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">percent_yes_sub</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>percent of no subscription: 88.73
+percent of yes subscription: 11.27
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>age</th>
+      <th>duration</th>
+      <th>campaign</th>
+      <th>pdays</th>
+      <th>previous</th>
+      <th>emp_var_rate</th>
+      <th>cons_price_idx</th>
+      <th>cons_conf_idx</th>
+      <th>euribor3m</th>
+      <th>nr_employed</th>
+    </tr>
+    <tr>
+      <th>y</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>39.911185</td>
+      <td>220.844807</td>
+      <td>2.633085</td>
+      <td>984.113878</td>
+      <td>0.132374</td>
+      <td>0.248875</td>
+      <td>93.603757</td>
+      <td>-40.593097</td>
+      <td>3.811491</td>
+      <td>5176.166600</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>40.913147</td>
+      <td>553.191164</td>
+      <td>2.051724</td>
+      <td>792.035560</td>
+      <td>0.492672</td>
+      <td>-1.233448</td>
+      <td>93.354386</td>
+      <td>-39.789784</td>
+      <td>2.123135</td>
+      <td>5095.115991</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;job&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>age</th>
+      <th>duration</th>
+      <th>campaign</th>
+      <th>pdays</th>
+      <th>previous</th>
+      <th>emp_var_rate</th>
+      <th>cons_price_idx</th>
+      <th>cons_conf_idx</th>
+      <th>euribor3m</th>
+      <th>nr_employed</th>
+      <th>y</th>
+    </tr>
+    <tr>
+      <th>job</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>admin.</th>
+      <td>38.187296</td>
+      <td>254.312128</td>
+      <td>2.623489</td>
+      <td>954.319229</td>
+      <td>0.189023</td>
+      <td>0.015563</td>
+      <td>93.534054</td>
+      <td>-40.245433</td>
+      <td>3.550274</td>
+      <td>5164.125350</td>
+      <td>0.129726</td>
+    </tr>
+    <tr>
+      <th>blue-collar</th>
+      <td>39.555760</td>
+      <td>264.542360</td>
+      <td>2.558461</td>
+      <td>985.160363</td>
+      <td>0.122542</td>
+      <td>0.248995</td>
+      <td>93.656656</td>
+      <td>-41.375816</td>
+      <td>3.771996</td>
+      <td>5175.615150</td>
+      <td>0.068943</td>
+    </tr>
+    <tr>
+      <th>entrepreneur</th>
+      <td>41.723214</td>
+      <td>263.267857</td>
+      <td>2.535714</td>
+      <td>981.267170</td>
+      <td>0.138736</td>
+      <td>0.158723</td>
+      <td>93.605372</td>
+      <td>-41.283654</td>
+      <td>3.791120</td>
+      <td>5176.313530</td>
+      <td>0.085165</td>
+    </tr>
+    <tr>
+      <th>housemaid</th>
+      <td>45.500000</td>
+      <td>250.454717</td>
+      <td>2.639623</td>
+      <td>960.579245</td>
+      <td>0.137736</td>
+      <td>0.433396</td>
+      <td>93.676576</td>
+      <td>-39.495283</td>
+      <td>4.009645</td>
+      <td>5179.529623</td>
+      <td>0.100000</td>
+    </tr>
+    <tr>
+      <th>management</th>
+      <td>42.362859</td>
+      <td>257.058140</td>
+      <td>2.476060</td>
+      <td>962.647059</td>
+      <td>0.185021</td>
+      <td>-0.012688</td>
+      <td>93.522755</td>
+      <td>-40.489466</td>
+      <td>3.611316</td>
+      <td>5166.650513</td>
+      <td>0.112175</td>
+    </tr>
+    <tr>
+      <th>retired</th>
+      <td>62.027326</td>
+      <td>273.712209</td>
+      <td>2.476744</td>
+      <td>897.936047</td>
+      <td>0.327326</td>
+      <td>-0.698314</td>
+      <td>93.430786</td>
+      <td>-38.573081</td>
+      <td>2.770066</td>
+      <td>5122.262151</td>
+      <td>0.252326</td>
+    </tr>
+    <tr>
+      <th>self-employed</th>
+      <td>39.949331</td>
+      <td>264.142153</td>
+      <td>2.660802</td>
+      <td>976.621393</td>
+      <td>0.143561</td>
+      <td>0.094159</td>
+      <td>93.559982</td>
+      <td>-40.488107</td>
+      <td>3.689376</td>
+      <td>5170.674384</td>
+      <td>0.104856</td>
+    </tr>
+    <tr>
+      <th>services</th>
+      <td>37.926430</td>
+      <td>258.398085</td>
+      <td>2.587805</td>
+      <td>979.974049</td>
+      <td>0.154951</td>
+      <td>0.175359</td>
+      <td>93.634659</td>
+      <td>-41.290048</td>
+      <td>3.699187</td>
+      <td>5171.600126</td>
+      <td>0.081381</td>
+    </tr>
+    <tr>
+      <th>student</th>
+      <td>25.894857</td>
+      <td>283.683429</td>
+      <td>2.104000</td>
+      <td>840.217143</td>
+      <td>0.524571</td>
+      <td>-1.408000</td>
+      <td>93.331613</td>
+      <td>-40.187543</td>
+      <td>1.884224</td>
+      <td>5085.939086</td>
+      <td>0.314286</td>
+    </tr>
+    <tr>
+      <th>technician</th>
+      <td>38.507638</td>
+      <td>250.232241</td>
+      <td>2.577339</td>
+      <td>964.408127</td>
+      <td>0.153789</td>
+      <td>0.274566</td>
+      <td>93.561471</td>
+      <td>-39.927569</td>
+      <td>3.820401</td>
+      <td>5175.648391</td>
+      <td>0.108260</td>
+    </tr>
+    <tr>
+      <th>unemployed</th>
+      <td>39.733728</td>
+      <td>249.451677</td>
+      <td>2.564103</td>
+      <td>935.316568</td>
+      <td>0.199211</td>
+      <td>-0.111736</td>
+      <td>93.563781</td>
+      <td>-40.007594</td>
+      <td>3.466583</td>
+      <td>5157.156509</td>
+      <td>0.142012</td>
+    </tr>
+    <tr>
+      <th>unknown</th>
+      <td>45.563636</td>
+      <td>239.675758</td>
+      <td>2.648485</td>
+      <td>938.727273</td>
+      <td>0.154545</td>
+      <td>0.357879</td>
+      <td>93.718942</td>
+      <td>-38.797879</td>
+      <td>3.949033</td>
+      <td>5172.931818</td>
+      <td>0.112121</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;marital&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>age</th>
+      <th>duration</th>
+      <th>campaign</th>
+      <th>pdays</th>
+      <th>previous</th>
+      <th>emp_var_rate</th>
+      <th>cons_price_idx</th>
+      <th>cons_conf_idx</th>
+      <th>euribor3m</th>
+      <th>nr_employed</th>
+      <th>y</th>
+    </tr>
+    <tr>
+      <th>marital</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>divorced</th>
+      <td>44.899393</td>
+      <td>253.790330</td>
+      <td>2.61340</td>
+      <td>968.639853</td>
+      <td>0.168690</td>
+      <td>0.163985</td>
+      <td>93.606563</td>
+      <td>-40.707069</td>
+      <td>3.715603</td>
+      <td>5170.878643</td>
+      <td>0.103209</td>
+    </tr>
+    <tr>
+      <th>married</th>
+      <td>42.307165</td>
+      <td>257.438623</td>
+      <td>2.57281</td>
+      <td>967.247673</td>
+      <td>0.155608</td>
+      <td>0.183625</td>
+      <td>93.597367</td>
+      <td>-40.270659</td>
+      <td>3.745832</td>
+      <td>5171.848772</td>
+      <td>0.101573</td>
+    </tr>
+    <tr>
+      <th>single</th>
+      <td>33.158714</td>
+      <td>261.524378</td>
+      <td>2.53380</td>
+      <td>949.909578</td>
+      <td>0.211359</td>
+      <td>-0.167989</td>
+      <td>93.517300</td>
+      <td>-40.918698</td>
+      <td>3.317447</td>
+      <td>5155.199265</td>
+      <td>0.140041</td>
+    </tr>
+    <tr>
+      <th>unknown</th>
+      <td>40.275000</td>
+      <td>312.725000</td>
+      <td>3.18750</td>
+      <td>937.100000</td>
+      <td>0.275000</td>
+      <td>-0.221250</td>
+      <td>93.471250</td>
+      <td>-40.820000</td>
+      <td>3.313038</td>
+      <td>5157.393750</td>
+      <td>0.150000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;education&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>age</th>
+      <th>duration</th>
+      <th>campaign</th>
+      <th>pdays</th>
+      <th>previous</th>
+      <th>emp_var_rate</th>
+      <th>cons_price_idx</th>
+      <th>cons_conf_idx</th>
+      <th>euribor3m</th>
+      <th>nr_employed</th>
+      <th>y</th>
+    </tr>
+    <tr>
+      <th>education</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Basic</th>
+      <td>39.061208</td>
+      <td>261.291811</td>
+      <td>2.532341</td>
+      <td>979.133168</td>
+      <td>0.141439</td>
+      <td>0.159239</td>
+      <td>93.623399</td>
+      <td>-41.326749</td>
+      <td>3.697963</td>
+      <td>5172.294012</td>
+      <td>0.078246</td>
+    </tr>
+    <tr>
+      <th>basic.4y</th>
+      <td>47.596504</td>
+      <td>264.827826</td>
+      <td>2.600575</td>
+      <td>965.704981</td>
+      <td>0.147031</td>
+      <td>0.215924</td>
+      <td>93.658309</td>
+      <td>-40.239871</td>
+      <td>3.751768</td>
+      <td>5170.124880</td>
+      <td>0.102490</td>
+    </tr>
+    <tr>
+      <th>basic.6y</th>
+      <td>40.448953</td>
+      <td>264.414485</td>
+      <td>2.556283</td>
+      <td>980.368237</td>
+      <td>0.129145</td>
+      <td>0.231152</td>
+      <td>93.650062</td>
+      <td>-41.127880</td>
+      <td>3.772942</td>
+      <td>5174.718063</td>
+      <td>0.082024</td>
+    </tr>
+    <tr>
+      <th>high.school</th>
+      <td>37.998213</td>
+      <td>260.886810</td>
+      <td>2.568576</td>
+      <td>964.358382</td>
+      <td>0.185917</td>
+      <td>0.032937</td>
+      <td>93.584857</td>
+      <td>-40.940641</td>
+      <td>3.556157</td>
+      <td>5164.994735</td>
+      <td>0.108355</td>
+    </tr>
+    <tr>
+      <th>illiterate</th>
+      <td>48.500000</td>
+      <td>276.777778</td>
+      <td>2.277778</td>
+      <td>943.833333</td>
+      <td>0.111111</td>
+      <td>-0.133333</td>
+      <td>93.317333</td>
+      <td>-39.950000</td>
+      <td>3.516556</td>
+      <td>5171.777778</td>
+      <td>0.222222</td>
+    </tr>
+    <tr>
+      <th>professional.course</th>
+      <td>40.080107</td>
+      <td>252.533855</td>
+      <td>2.586115</td>
+      <td>960.765974</td>
+      <td>0.163075</td>
+      <td>0.173012</td>
+      <td>93.569864</td>
+      <td>-40.124108</td>
+      <td>3.710457</td>
+      <td>5170.155979</td>
+      <td>0.113485</td>
+    </tr>
+    <tr>
+      <th>university.degree</th>
+      <td>38.879191</td>
+      <td>253.223373</td>
+      <td>2.563527</td>
+      <td>951.807692</td>
+      <td>0.192390</td>
+      <td>-0.028090</td>
+      <td>93.493466</td>
+      <td>-39.975805</td>
+      <td>3.529663</td>
+      <td>5163.226298</td>
+      <td>0.137245</td>
+    </tr>
+    <tr>
+      <th>unknown</th>
+      <td>43.481225</td>
+      <td>262.390526</td>
+      <td>2.596187</td>
+      <td>942.830734</td>
+      <td>0.226459</td>
+      <td>0.059099</td>
+      <td>93.658615</td>
+      <td>-39.877816</td>
+      <td>3.571098</td>
+      <td>5159.549509</td>
+      <td>0.145003</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Visualization</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">job</span><span class="p">,</span><span class="n">data</span><span class="o">.</span><span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;purchase frequency for Job&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;job&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frequency of purchase&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Frequency of purchase&#39;)
+</pre></div>
+</div>
+<img alt="_images/行銷活動目標客戶分析_17_1.png" src="_images/行銷活動目標客戶分析_17_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">job</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="n">data</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">y</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th>month</th>
+      <th colspan="2" halign="left">apr</th>
+      <th colspan="2" halign="left">aug</th>
+      <th colspan="2" halign="left">dec</th>
+      <th colspan="2" halign="left">jul</th>
+      <th colspan="2" halign="left">jun</th>
+      <th colspan="2" halign="left">mar</th>
+      <th colspan="2" halign="left">may</th>
+      <th colspan="2" halign="left">nov</th>
+      <th colspan="2" halign="left">oct</th>
+      <th colspan="2" halign="left">sep</th>
+    </tr>
+    <tr>
+      <th>y</th>
+      <th>0</th>
+      <th>1</th>
+      <th>0</th>
+      <th>1</th>
+      <th>0</th>
+      <th>1</th>
+      <th>0</th>
+      <th>1</th>
+      <th>0</th>
+      <th>1</th>
+      <th>0</th>
+      <th>1</th>
+      <th>0</th>
+      <th>1</th>
+      <th>0</th>
+      <th>1</th>
+      <th>0</th>
+      <th>1</th>
+      <th>0</th>
+      <th>1</th>
+    </tr>
+    <tr>
+      <th>job</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>admin.</th>
+      <td>469</td>
+      <td>175</td>
+      <td>1826</td>
+      <td>213</td>
+      <td>28</td>
+      <td>22</td>
+      <td>1623</td>
+      <td>192</td>
+      <td>1080</td>
+      <td>158</td>
+      <td>80</td>
+      <td>89</td>
+      <td>2808</td>
+      <td>211</td>
+      <td>965</td>
+      <td>120</td>
+      <td>109</td>
+      <td>88</td>
+      <td>82</td>
+      <td>84</td>
+    </tr>
+    <tr>
+      <th>blue-collar</th>
+      <td>512</td>
+      <td>53</td>
+      <td>534</td>
+      <td>48</td>
+      <td>7</td>
+      <td>5</td>
+      <td>1669</td>
+      <td>120</td>
+      <td>1289</td>
+      <td>96</td>
+      <td>23</td>
+      <td>27</td>
+      <td>3974</td>
+      <td>225</td>
+      <td>560</td>
+      <td>42</td>
+      <td>35</td>
+      <td>16</td>
+      <td>13</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>entrepreneur</th>
+      <td>94</td>
+      <td>15</td>
+      <td>61</td>
+      <td>13</td>
+      <td>0</td>
+      <td>1</td>
+      <td>256</td>
+      <td>17</td>
+      <td>198</td>
+      <td>19</td>
+      <td>1</td>
+      <td>1</td>
+      <td>452</td>
+      <td>32</td>
+      <td>254</td>
+      <td>15</td>
+      <td>10</td>
+      <td>5</td>
+      <td>6</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>housemaid</th>
+      <td>28</td>
+      <td>19</td>
+      <td>193</td>
+      <td>15</td>
+      <td>5</td>
+      <td>5</td>
+      <td>226</td>
+      <td>13</td>
+      <td>125</td>
+      <td>11</td>
+      <td>2</td>
+      <td>4</td>
+      <td>282</td>
+      <td>14</td>
+      <td>74</td>
+      <td>13</td>
+      <td>11</td>
+      <td>8</td>
+      <td>8</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>management</th>
+      <td>165</td>
+      <td>30</td>
+      <td>317</td>
+      <td>40</td>
+      <td>7</td>
+      <td>5</td>
+      <td>359</td>
+      <td>40</td>
+      <td>309</td>
+      <td>43</td>
+      <td>25</td>
+      <td>17</td>
+      <td>856</td>
+      <td>53</td>
+      <td>508</td>
+      <td>53</td>
+      <td>25</td>
+      <td>26</td>
+      <td>25</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <th>retired</th>
+      <td>93</td>
+      <td>67</td>
+      <td>262</td>
+      <td>80</td>
+      <td>16</td>
+      <td>17</td>
+      <td>220</td>
+      <td>51</td>
+      <td>146</td>
+      <td>27</td>
+      <td>33</td>
+      <td>31</td>
+      <td>299</td>
+      <td>30</td>
+      <td>89</td>
+      <td>47</td>
+      <td>76</td>
+      <td>50</td>
+      <td>52</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <th>self-employed</th>
+      <td>75</td>
+      <td>22</td>
+      <td>196</td>
+      <td>16</td>
+      <td>2</td>
+      <td>4</td>
+      <td>199</td>
+      <td>21</td>
+      <td>182</td>
+      <td>22</td>
+      <td>13</td>
+      <td>12</td>
+      <td>394</td>
+      <td>24</td>
+      <td>184</td>
+      <td>14</td>
+      <td>15</td>
+      <td>6</td>
+      <td>12</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>services</th>
+      <td>249</td>
+      <td>32</td>
+      <td>249</td>
+      <td>31</td>
+      <td>0</td>
+      <td>2</td>
+      <td>719</td>
+      <td>71</td>
+      <td>508</td>
+      <td>34</td>
+      <td>15</td>
+      <td>10</td>
+      <td>1565</td>
+      <td>101</td>
+      <td>306</td>
+      <td>15</td>
+      <td>16</td>
+      <td>17</td>
+      <td>19</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>student</th>
+      <td>69</td>
+      <td>35</td>
+      <td>72</td>
+      <td>44</td>
+      <td>14</td>
+      <td>6</td>
+      <td>83</td>
+      <td>22</td>
+      <td>68</td>
+      <td>33</td>
+      <td>16</td>
+      <td>25</td>
+      <td>189</td>
+      <td>43</td>
+      <td>36</td>
+      <td>18</td>
+      <td>26</td>
+      <td>27</td>
+      <td>27</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>technician</th>
+      <td>295</td>
+      <td>73</td>
+      <td>1653</td>
+      <td>134</td>
+      <td>8</td>
+      <td>16</td>
+      <td>974</td>
+      <td>82</td>
+      <td>655</td>
+      <td>83</td>
+      <td>53</td>
+      <td>49</td>
+      <td>1706</td>
+      <td>127</td>
+      <td>563</td>
+      <td>64</td>
+      <td>58</td>
+      <td>58</td>
+      <td>48</td>
+      <td>44</td>
+    </tr>
+    <tr>
+      <th>unemployed</th>
+      <td>37</td>
+      <td>16</td>
+      <td>105</td>
+      <td>16</td>
+      <td>5</td>
+      <td>5</td>
+      <td>152</td>
+      <td>13</td>
+      <td>147</td>
+      <td>23</td>
+      <td>7</td>
+      <td>11</td>
+      <td>241</td>
+      <td>23</td>
+      <td>142</td>
+      <td>12</td>
+      <td>17</td>
+      <td>11</td>
+      <td>17</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>unknown</th>
+      <td>7</td>
+      <td>2</td>
+      <td>55</td>
+      <td>5</td>
+      <td>1</td>
+      <td>1</td>
+      <td>45</td>
+      <td>7</td>
+      <td>52</td>
+      <td>10</td>
+      <td>2</td>
+      <td>0</td>
+      <td>117</td>
+      <td>3</td>
+      <td>4</td>
+      <td>3</td>
+      <td>5</td>
+      <td>3</td>
+      <td>5</td>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">marital</span><span class="p">,</span><span class="n">data</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
+<span class="n">table</span><span class="o">.</span><span class="n">div</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">stacked</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Material status vs Purchase&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Material status&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Proportion of Custmers&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Proportion of Custmers&#39;)
+</pre></div>
+</div>
+<img alt="_images/行銷活動目標客戶分析_19_1.png" src="_images/行銷活動目標客戶分析_19_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#education seems a good predictor of the outcome variable</span>
+<span class="n">table</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">education</span><span class="p">,</span><span class="n">data</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
+<span class="n">table</span><span class="o">.</span><span class="n">div</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">),</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span><span class="n">stacked</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Education vs Purchase&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Education&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Proportion of Customers&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Proportion of Customers&#39;)
+</pre></div>
+</div>
+<img alt="_images/行銷活動目標客戶分析_20_1.png" src="_images/行銷活動目標客戶分析_20_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># day of week may not be a good predictor</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">day_of_week</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;purchase frequency for day of week&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Day of week&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frequency of purchase&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Frequency of purchase&#39;)
+</pre></div>
+</div>
+<img alt="_images/行銷活動目標客戶分析_21_1.png" src="_images/行銷活動目標客戶分析_21_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># month might be a good predictor</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Purchase Frequency for Month&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Month&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frequency of Purchase&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Frequency of Purchase&#39;)
+</pre></div>
+</div>
+<img alt="_images/行銷活動目標客戶分析_22_1.png" src="_images/行銷活動目標客戶分析_22_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">age</span><span class="o">.</span><span class="n">hist</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Histogram of age&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Age&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frequency&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Frequency&#39;)
+</pre></div>
+</div>
+<img alt="_images/行銷活動目標客戶分析_23_1.png" src="_images/行銷活動目標客戶分析_23_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">poutcome</span><span class="p">,</span><span class="n">data</span><span class="o">.</span><span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Purchase Frequency for Poutcome&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Poutcome&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frequency of Purchase&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Frequency of Purchase&#39;)
+</pre></div>
+</div>
+<img alt="_images/行銷活動目標客戶分析_24_1.png" src="_images/行銷活動目標客戶分析_24_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create dummy variables</span>
+<span class="n">cat_vars</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;job&#39;</span><span class="p">,</span> <span class="s1">&#39;marital&#39;</span><span class="p">,</span> <span class="s1">&#39;education&#39;</span><span class="p">,</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="s1">&#39;housing&#39;</span><span class="p">,</span><span class="s1">&#39;loan&#39;</span><span class="p">,</span><span class="s1">&#39;contact&#39;</span><span class="p">,</span><span class="s1">&#39;month&#39;</span><span class="p">,</span><span class="s1">&#39;day_of_week&#39;</span><span class="p">,</span><span class="s1">&#39;poutcome&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="n">cat_vars</span><span class="p">:</span>
+    <span class="n">cat_list</span><span class="o">=</span><span class="s1">&#39;var&#39;</span><span class="o">+</span><span class="s1">&#39;_&#39;</span><span class="o">+</span><span class="n">var</span>
+    <span class="n">cat_list</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">var</span><span class="p">],</span> <span class="n">prefix</span><span class="o">=</span><span class="n">var</span><span class="p">)</span>
+    <span class="n">data1</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">cat_list</span><span class="p">)</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">data1</span>
+    
+<span class="n">cat_vars</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;job&#39;</span><span class="p">,</span><span class="s1">&#39;marital&#39;</span><span class="p">,</span><span class="s1">&#39;education&#39;</span><span class="p">,</span><span class="s1">&#39;default&#39;</span><span class="p">,</span><span class="s1">&#39;housing&#39;</span><span class="p">,</span><span class="s1">&#39;loan&#39;</span><span class="p">,</span><span class="s1">&#39;contact&#39;</span><span class="p">,</span><span class="s1">&#39;month&#39;</span><span class="p">,</span><span class="s1">&#39;day_of_week&#39;</span><span class="p">,</span><span class="s1">&#39;poutcome&#39;</span><span class="p">]</span>
+<span class="n">data_vars</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">to_keep</span><span class="o">=</span><span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">data_vars</span> <span class="k">if</span> <span class="n">i</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">cat_vars</span><span class="p">]</span>
+<span class="n">data_final</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="n">to_keep</span><span class="p">]</span>
+<span class="n">data_final</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;age&#39;, &#39;duration&#39;, &#39;campaign&#39;, &#39;pdays&#39;, &#39;previous&#39;, &#39;emp_var_rate&#39;,
+       &#39;cons_price_idx&#39;, &#39;cons_conf_idx&#39;, &#39;euribor3m&#39;, &#39;nr_employed&#39;, &#39;y&#39;,
+       &#39;job_admin.&#39;, &#39;job_blue-collar&#39;, &#39;job_entrepreneur&#39;,
+       &#39;job_housemaid&#39;, &#39;job_management&#39;, &#39;job_retired&#39;,
+       &#39;job_self-employed&#39;, &#39;job_services&#39;, &#39;job_student&#39;,
+       &#39;job_technician&#39;, &#39;job_unemployed&#39;, &#39;job_unknown&#39;,
+       &#39;marital_divorced&#39;, &#39;marital_married&#39;, &#39;marital_single&#39;,
+       &#39;marital_unknown&#39;, &#39;education_Basic&#39;, &#39;education_basic.4y&#39;,
+       &#39;education_basic.6y&#39;, &#39;education_high.school&#39;,
+       &#39;education_illiterate&#39;, &#39;education_professional.course&#39;,
+       &#39;education_university.degree&#39;, &#39;education_unknown&#39;, &#39;default_no&#39;,
+       &#39;default_unknown&#39;, &#39;default_yes&#39;, &#39;housing_no&#39;, &#39;housing_unknown&#39;,
+       &#39;housing_yes&#39;, &#39;loan_no&#39;, &#39;loan_unknown&#39;, &#39;loan_yes&#39;,
+       &#39;contact_cellular&#39;, &#39;contact_telephone&#39;, &#39;month_apr&#39;, &#39;month_aug&#39;,
+       &#39;month_dec&#39;, &#39;month_jul&#39;, &#39;month_jun&#39;, &#39;month_mar&#39;, &#39;month_may&#39;,
+       &#39;month_nov&#39;, &#39;month_oct&#39;, &#39;month_sep&#39;, &#39;day_of_week_fri&#39;,
+       &#39;day_of_week_mon&#39;, &#39;day_of_week_thu&#39;, &#39;day_of_week_tue&#39;,
+       &#39;day_of_week_wed&#39;, &#39;poutcome_failure&#39;, &#39;poutcome_nonexistent&#39;,
+       &#39;poutcome_success&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">data_final</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># over-sampling using SMOTE</span>
+<span class="n">X</span><span class="o">=</span><span class="n">data_final</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="n">data_final</span><span class="o">.</span><span class="n">columns</span> <span class="o">!=</span><span class="s1">&#39;y&#39;</span><span class="p">]</span>
+<span class="n">y</span><span class="o">=</span><span class="n">data_final</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="n">data_final</span><span class="o">.</span><span class="n">columns</span> <span class="o">==</span> <span class="s1">&#39;y&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">imblearn.over_sampling</span> <span class="kn">import</span> <span class="n">SMOTE</span>
+
+<span class="n">os</span><span class="o">=</span><span class="n">SMOTE</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=.</span><span class="mi">3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">columns</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">columns</span>
+
+<span class="n">os_data_X</span><span class="p">,</span> <span class="n">os_data_y</span><span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">fit_sample</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">os_data_X</span><span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">os_data_X</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">columns</span><span class="p">)</span>
+<span class="n">os_data_y</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">os_data_y</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">])</span>
+<span class="c1">#can check the numbers of our data</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;length of oversampled data is&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">os_data_X</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of no subscription in oversampled data&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">os_data_y</span><span class="p">[</span><span class="n">os_data_y</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of subscription&quot;</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">os_data_y</span><span class="p">[</span><span class="n">os_data_y</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Proportion of no subscription data in oversampled data is &quot;</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">os_data_y</span><span class="p">[</span><span class="n">os_data_y</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">])</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">os_data_X</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Proportion of subscription data in oversampled data is &quot;</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">os_data_y</span><span class="p">[</span><span class="n">os_data_y</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">os_data_X</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>length of oversampled data is 51134
+Number of no subscription in oversampled data 25567
+Number of subscription 25567
+Proportion of no subscription data in oversampled data is  0.5
+Proportion of subscription data in oversampled data is  0.5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Recursive feature elimination</span>
+<span class="n">data_final_vars</span><span class="o">=</span> <span class="n">data_final</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span>
+<span class="n">X</span><span class="o">=</span><span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">data_final_vars</span> <span class="k">if</span> <span class="n">i</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">y</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">datasets</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="kn">import</span> <span class="n">RFE</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+<span class="n">logreg</span> <span class="o">=</span><span class="n">LogisticRegression</span><span class="p">()</span>
+
+<span class="n">rfe</span><span class="o">=</span><span class="n">RFE</span><span class="p">(</span><span class="n">logreg</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">rfe</span><span class="o">=</span><span class="n">rfe</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">os_data_X</span><span class="p">,</span> <span class="n">os_data_y</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rfe</span><span class="o">.</span><span class="n">support_</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rfe</span><span class="o">.</span><span class="n">ranking_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\ProgramData\Anaconda3\lib\site-packages\sklearn\utils\validation.py:70: FutureWarning: Pass n_features_to_select=20 as keyword args. From version 0.25 passing these as positional arguments will result in an error
+  FutureWarning)
+C:\ProgramData\Anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+C:\ProgramData\Anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+C:\ProgramData\Anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+C:\ProgramData\Anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+C:\ProgramData\Anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+C:\ProgramData\Anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+C:\ProgramData\Anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+C:\ProgramData\Anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+C:\ProgramData\Anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+C:\ProgramData\Anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+C:\ProgramData\Anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+C:\ProgramData\Anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+C:\ProgramData\Anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+C:\ProgramData\Anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+C:\ProgramData\Anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\ProgramData\Anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+C:\ProgramData\Anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+C:\ProgramData\Anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+C:\ProgramData\Anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+C:\ProgramData\Anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+C:\ProgramData\Anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+C:\ProgramData\Anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+C:\ProgramData\Anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+C:\ProgramData\Anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+C:\ProgramData\Anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+C:\ProgramData\Anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+C:\ProgramData\Anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+C:\ProgramData\Anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+C:\ProgramData\Anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+C:\ProgramData\Anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+C:\ProgramData\Anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\ProgramData\Anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+C:\ProgramData\Anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+C:\ProgramData\Anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[False False False False False False False False False False False False
+ False False False False False False False False False False  True  True
+ False False  True  True  True  True False  True  True  True False False
+ False  True  True  True  True  True  True False False False False False
+ False False False False False False False  True  True  True  True  True
+ False False False]
+[39 37 34 40 33 30 32 43 23 35 15  8 10  9 14 18 13 11 19 12 17 16  1  1
+  2  3  1  1  1  1 42  1  1  1 21 20 44  1  1  1  1  1  1  5  4 24 38 27
+ 28 31 36 22 25 26 29  1  1  1  1  1  7  6 41]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cols</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;euribor3m&#39;</span><span class="p">,</span> <span class="s1">&#39;job_blue-collar&#39;</span><span class="p">,</span> <span class="s1">&#39;job_housemaid&#39;</span><span class="p">,</span> <span class="s1">&#39;marital_unknown&#39;</span><span class="p">,</span> <span class="s1">&#39;education_illiterate&#39;</span><span class="p">,</span> <span class="s1">&#39;default_no&#39;</span><span class="p">,</span> <span class="s1">&#39;default_unknown&#39;</span><span class="p">,</span> 
+      <span class="s1">&#39;contact_cellular&#39;</span><span class="p">,</span> <span class="s1">&#39;contact_telephone&#39;</span><span class="p">,</span> <span class="s1">&#39;month_apr&#39;</span><span class="p">,</span> <span class="s1">&#39;month_aug&#39;</span><span class="p">,</span> <span class="s1">&#39;month_dec&#39;</span><span class="p">,</span> <span class="s1">&#39;month_jul&#39;</span><span class="p">,</span> <span class="s1">&#39;month_jun&#39;</span><span class="p">,</span> <span class="s1">&#39;month_mar&#39;</span><span class="p">,</span> 
+      <span class="s1">&#39;month_may&#39;</span><span class="p">,</span> <span class="s1">&#39;month_nov&#39;</span><span class="p">,</span> <span class="s1">&#39;month_oct&#39;</span><span class="p">,</span> <span class="s2">&quot;poutcome_failure&quot;</span><span class="p">,</span> <span class="s2">&quot;poutcome_success&quot;</span><span class="p">]</span> 
+<span class="n">X</span><span class="o">=</span><span class="n">os_data_X</span><span class="p">[</span><span class="n">cols</span><span class="p">]</span>
+<span class="n">y</span><span class="o">=</span><span class="n">os_data_y</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># implementing the model</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="n">logit_model</span><span class="o">=</span><span class="n">sm</span><span class="o">.</span><span class="n">Logit</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">X</span><span class="p">)</span>
+<span class="n">result</span><span class="o">=</span> <span class="n">logit_model</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">summary2</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Optimization terminated successfully.
+         Current function value: 0.455633
+         Iterations 7
+                           Results: Logit
+=====================================================================
+Model:                Logit             Pseudo R-squared:  0.343     
+Dependent Variable:   y                 AIC:               46636.6256
+Date:                 2020-10-26 14:36  BIC:               46813.4697
+No. Observations:     51134             Log-Likelihood:    -23298.   
+Df Model:             19                LL-Null:           -35443.   
+Df Residuals:         51114             LLR p-value:       0.0000    
+Converged:            1.0000            Scale:             1.0000    
+No. Iterations:       7.0000                                         
+---------------------------------------------------------------------
+                      Coef.  Std.Err.    z     P&gt;|z|   [0.025  0.975]
+---------------------------------------------------------------------
+euribor3m             0.1617   0.0082  19.8381 0.0000  0.1457  0.1777
+job_blue-collar      -0.9895   0.0381 -25.9933 0.0000 -1.0641 -0.9149
+job_housemaid        -1.6277   0.1377 -11.8203 0.0000 -1.8976 -1.3578
+marital_unknown      -1.1082   0.4206  -2.6347 0.0084 -1.9326 -0.2838
+education_illiterate  0.2401   0.6650   0.3611 0.7180 -1.0632  1.5435
+default_no            0.7936   0.0371  21.4170 0.0000  0.7210  0.8662
+default_unknown      -0.4698   0.0569  -8.2524 0.0000 -0.5814 -0.3583
+contact_cellular      1.5135   0.0441  34.2919 0.0000  1.4270  1.6000
+contact_telephone    -0.3703   0.0574  -6.4492 0.0000 -0.4829 -0.2578
+month_apr            -2.1811   0.0546 -39.9185 0.0000 -2.2882 -2.0740
+month_aug            -3.6222   0.0529 -68.4816 0.0000 -3.7259 -3.5186
+month_dec            -1.7428   0.1714 -10.1662 0.0000 -2.0788 -1.4068
+month_jul            -3.4543   0.0529 -65.2374 0.0000 -3.5580 -3.3505
+month_jun            -2.0961   0.0529 -39.5963 0.0000 -2.1999 -1.9924
+month_mar            -1.0949   0.0955 -11.4673 0.0000 -1.2820 -0.9078
+month_may            -2.5275   0.0441 -57.2710 0.0000 -2.6140 -2.4410
+month_nov            -3.6169   0.0577 -62.7322 0.0000 -3.7300 -3.5039
+month_oct            -1.0518   0.0856 -12.2924 0.0000 -1.2196 -0.8841
+poutcome_failure     -0.8987   0.0462 -19.4482 0.0000 -0.9893 -0.8081
+poutcome_success      2.4598   0.0662  37.1382 0.0000  2.3300  2.5896
+=====================================================================
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="the-p-values-for-one-variable-is-very-high-therefore-we-will-remove-them">
+<h1>The p-values for one variable is very high, therefore, we will remove them.<a class="headerlink" href="#the-p-values-for-one-variable-is-very-high-therefore-we-will-remove-them" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cols</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;euribor3m&#39;</span><span class="p">,</span> <span class="s1">&#39;job_blue-collar&#39;</span><span class="p">,</span> <span class="s1">&#39;job_housemaid&#39;</span><span class="p">,</span> <span class="s1">&#39;marital_unknown&#39;</span><span class="p">,</span> <span class="s1">&#39;default_no&#39;</span><span class="p">,</span> <span class="s1">&#39;default_unknown&#39;</span><span class="p">,</span> 
+      <span class="s1">&#39;contact_cellular&#39;</span><span class="p">,</span> <span class="s1">&#39;contact_telephone&#39;</span><span class="p">,</span> <span class="s1">&#39;month_apr&#39;</span><span class="p">,</span> <span class="s1">&#39;month_aug&#39;</span><span class="p">,</span> <span class="s1">&#39;month_dec&#39;</span><span class="p">,</span> <span class="s1">&#39;month_jul&#39;</span><span class="p">,</span> <span class="s1">&#39;month_jun&#39;</span><span class="p">,</span> <span class="s1">&#39;month_mar&#39;</span><span class="p">,</span> 
+      <span class="s1">&#39;month_may&#39;</span><span class="p">,</span> <span class="s1">&#39;month_nov&#39;</span><span class="p">,</span> <span class="s1">&#39;month_oct&#39;</span><span class="p">,</span> <span class="s2">&quot;poutcome_failure&quot;</span><span class="p">,</span> <span class="s2">&quot;poutcome_success&quot;</span><span class="p">]</span>
+<span class="n">X</span><span class="o">=</span><span class="n">os_data_X</span><span class="p">[</span><span class="n">cols</span><span class="p">]</span>
+<span class="n">y</span><span class="o">=</span><span class="n">os_data_y</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span>
+<span class="n">logit_model</span><span class="o">=</span><span class="n">sm</span><span class="o">.</span><span class="n">Logit</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">X</span><span class="p">)</span>
+<span class="n">result</span><span class="o">=</span> <span class="n">logit_model</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">summary2</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Optimization terminated successfully.
+         Current function value: 0.455634
+         Iterations 7
+                          Results: Logit
+==================================================================
+Model:               Logit            Pseudo R-squared: 0.343     
+Dependent Variable:  y                AIC:              46634.7531
+Date:                2020-10-26 14:41 BIC:              46802.7550
+No. Observations:    51134            Log-Likelihood:   -23298.   
+Df Model:            18               LL-Null:          -35443.   
+Df Residuals:        51115            LLR p-value:      0.0000    
+Converged:           1.0000           Scale:            1.0000    
+No. Iterations:      7.0000                                       
+------------------------------------------------------------------
+                   Coef.  Std.Err.    z     P&gt;|z|   [0.025  0.975]
+------------------------------------------------------------------
+euribor3m          0.1617   0.0082  19.8363 0.0000  0.1457  0.1777
+job_blue-collar   -0.9893   0.0381 -25.9910 0.0000 -1.0639 -0.9147
+job_housemaid     -1.6276   0.1377 -11.8193 0.0000 -1.8975 -1.3577
+marital_unknown   -1.1083   0.4206  -2.6348 0.0084 -1.9327 -0.2839
+default_no         0.7936   0.0371  21.4177 0.0000  0.7210  0.8662
+default_unknown   -0.4697   0.0569  -8.2497 0.0000 -0.5812 -0.3581
+contact_cellular   1.5135   0.0441  34.2924 0.0000  1.4270  1.6000
+contact_telephone -0.3703   0.0574  -6.4484 0.0000 -0.4828 -0.2577
+month_apr         -2.1809   0.0546 -39.9173 0.0000 -2.2880 -2.0738
+month_aug         -3.6220   0.0529 -68.4814 0.0000 -3.7257 -3.5184
+month_dec         -1.7428   0.1714 -10.1664 0.0000 -2.0788 -1.4068
+month_jul         -3.4542   0.0529 -65.2366 0.0000 -3.5580 -3.3504
+month_jun         -2.0961   0.0529 -39.5968 0.0000 -2.1999 -1.9924
+month_mar         -1.0949   0.0955 -11.4675 0.0000 -1.2821 -0.9078
+month_may         -2.5275   0.0441 -57.2713 0.0000 -2.6140 -2.4410
+month_nov         -3.6167   0.0577 -62.7324 0.0000 -3.7297 -3.5037
+month_oct         -1.0519   0.0856 -12.2926 0.0000 -1.2196 -0.8842
+poutcome_failure  -0.8988   0.0462 -19.4505 0.0000 -0.9894 -0.8082
+poutcome_success   2.4599   0.0662  37.1381 0.0000  2.3300  2.5897
+==================================================================
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="logistic-regression-model-fitting">
+<h1>Logistic Regression Model Fitting<a class="headerlink" href="#logistic-regression-model-fitting" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
+
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=.</span><span class="mi">3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">logreg</span><span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span>
+<span class="n">logreg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\ProgramData\Anaconda3\lib\site-packages\sklearn\linear_model\_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LogisticRegression()
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_pred</span> <span class="o">=</span> <span class="n">logreg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Accuracy of logistic regression classifier on test set: </span><span class="si">{:.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">logreg</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accuracy of logistic regression classifier on test set: 0.87
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="confusion-matrix">
+<h1>Confusion matrix<a class="headerlink" href="#confusion-matrix" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span>
+<span class="n">confusion_matrix</span><span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">confusion_matrix</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[7021  645]
+ [1335 6340]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
+
+           0       0.84      0.92      0.88      7666
+           1       0.91      0.83      0.86      7675
+
+    accuracy                           0.87     15341
+   macro avg       0.87      0.87      0.87     15341
+weighted avg       0.87      0.87      0.87     15341
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="roc-curve">
+<h1>ROC curve<a class="headerlink" href="#roc-curve" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">roc_auc_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">roc_curve</span>
+<span class="n">logit_roc_auc</span><span class="o">=</span><span class="n">roc_auc_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">logreg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">))</span>
+<span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">threshold</span> <span class="o">=</span> <span class="n">roc_curve</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">logreg</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Logistic Regression (area=</span><span class="si">%0.2f</span><span class="s1">)&#39;</span> <span class="o">%</span><span class="k">logit_roc_auc</span>)
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;r--&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="o">-</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;False Positive Rate&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;True Positive Rate&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Receiver operating characteristic&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower right&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;Log_ROC&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/行銷活動目標客戶分析_42_0.png" src="_images/行銷活動目標客戶分析_42_0.png" />
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="Titanic_survive_prediction.html" title="previous page">Titanic survive prediction</a>
+    <a class='right-next' id="next-link" href="特徵工程_breast cancer PCA.html" title="next page">breast cancer PCA and 分布圖</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Lin yung lun<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    
+  </body>
+</html>
