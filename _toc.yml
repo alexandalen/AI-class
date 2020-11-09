@@ -16,7 +16,8 @@
 - file: 行銷活動目標客戶分析
 - file: 特徵工程_breast cancer PCA
 - file: 特徵工程_Titanic PCA
-- file: 假設檢定
+- file: 假設檢定_president_height
+- file: president_heights
 - file: Titanic_predict_streamlit
 - file: model
 - file: std
