@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>方程式語法 (Input) &#8212; 我的AI學習歷程檔案</title>
+    <title>統計 (t-test) &#8212; 我的AI學習歷程檔案</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
@@ -37,8 +37,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="方程式語法 (tkinter)" href="Equations_tkinter.html" />
-    <link rel="prev" title="Boston Housing" href="Boston Housing.html" />
+    <link rel="prev" title="Titanic PCA and 分布圖" href="特徵工程_Titanic PCA.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -89,8 +88,8 @@
    Boston Housing
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Equations_input.html">
    方程式語法 (Input)
   </a>
  </li>
@@ -184,8 +183,8 @@
    Titanic PCA and 分布圖
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="假設檢定_president_height.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    統計 (t-test)
   </a>
  </li>
@@ -231,7 +230,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/Equations_input.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/假設檢定_president_height.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -255,7 +254,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Equations_input.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/假設檢定_president_height.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -263,7 +262,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/Equations_input.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/假設檢定_president_height.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -289,44 +288,152 @@
         
               <div>
                 
-  <div class="section" id="input">
-<h1>方程式語法 (Input)<a class="headerlink" href="#input" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="t-test">
+<h1>統計 (t-test)<a class="headerlink" href="#t-test" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">equation</span><span class="o">=</span><span class="p">[]</span>
-<span class="kn">from</span> <span class="nn">sympy.solvers</span> <span class="kn">import</span> <span class="n">solve</span>
-<span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">symbols</span>
-<span class="k">while</span> <span class="mi">1</span><span class="p">:</span>
-    <span class="n">a</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;請輸入方程式:&quot;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">a</span><span class="o">==</span><span class="s2">&quot;&quot;</span><span class="p">:</span>
-        <span class="k">break</span>
-    <span class="n">arr</span><span class="o">=</span><span class="n">a</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span><span class="o">==</span><span class="mi">2</span><span class="p">:</span>
-        <span class="n">a</span><span class="o">=</span><span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s2">&quot;-(&quot;</span><span class="o">+</span><span class="n">arr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="s2">&quot;)&quot;</span>
-        <span class="n">equation</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">equation</span><span class="p">)</span>
-<span class="n">solve</span><span class="p">(</span><span class="n">equation</span><span class="p">)</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>  
+<span class="n">df</span><span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./president_heights.csv&#39;</span><span class="p">)</span>
+<span class="n">d</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">[[</span><span class="s1">&#39;height(cm)&#39;</span><span class="p">]])</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">b043b9a4a753</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">symbols</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="k">while</span> <span class="mi">1</span><span class="p">:</span>
-<span class="ne">----&gt; </span><span class="mi">5</span>     <span class="n">a</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;請輸入方程式:&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="k">if</span> <span class="n">a</span><span class="o">==</span><span class="s2">&quot;&quot;</span><span class="p">:</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span>         <span class="k">break</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    height(cm)
+0          189
+1          170
+2          189
+3          163
+4          183
+5          171
+6          185
+7          168
+8          173
+9          183
+10         173
+11         173
+12         175
+13         178
+14         183
+15         193
+16         178
+17         173
+18         174
+19         183
+20         183
+21         168
+22         170
+23         178
+24         182
+25         180
+26         183
+27         178
+28         182
+29         188
+30         175
+31         179
+32         183
+33         193
+34         182
+35         183
+36         177
+37         185
+38         188
+39         188
+40         182
+41         185
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">last</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">last</span><span class="p">[[</span><span class="s1">&#39;height(cm)&#39;</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    height(cm)
+32         183
+33         193
+34         182
+35         183
+36         177
+37         185
+38         188
+39         188
+40         182
+41         185
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">early</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">-</span><span class="mi">10</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">early</span><span class="p">[[</span><span class="s1">&#39;height(cm)&#39;</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    height(cm)
+0          189
+1          170
+2          189
+3          163
+4          183
+5          171
+6          185
+7          168
+8          173
+9          183
+10         173
+11         173
+12         175
+13         178
+14         183
+15         193
+16         178
+17         173
+18         174
+19         183
+20         183
+21         168
+22         170
+23         178
+24         182
+25         180
+26         183
+27         178
+28         182
+29         188
+30         175
+31         179
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s1</span><span class="o">=</span><span class="n">last</span><span class="p">[[</span><span class="s1">&#39;height(cm)&#39;</span><span class="p">]]</span>
+<span class="n">s2</span><span class="o">=</span><span class="n">early</span><span class="p">[[</span><span class="s1">&#39;height(cm)&#39;</span><span class="p">]]</span>
 
-<span class="nn">C:\ProgramData\Anaconda3\lib\site-packages\ipykernel\kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">    </span><span class="mi">852</span>         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">853</span>             <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span>
-<span class="ne">--&gt; </span><span class="mi">854</span>                 <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">855</span>             <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">856</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
-
-<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+<span class="c1">#sample=np.append(s1,s2)</span>
+<span class="c1">#print(sample)</span>
+<span class="n">t</span><span class="p">,</span><span class="n">p</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span><span class="n">s2</span><span class="p">)</span>
+<span class="n">p1</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">p</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> 
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;t-statistic:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;p-value:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">p1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>t-statistic:[2.69562114]
+p-value:0.005113
 </pre></div>
 </div>
 </div>
@@ -361,8 +468,7 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="Boston Housing.html" title="previous page">Boston Housing</a>
-    <a class='right-next' id="next-link" href="Equations_tkinter.html" title="next page">方程式語法 (tkinter)</a>
+    <a class='left-prev' id="prev-link" href="特徵工程_Titanic PCA.html" title="previous page">Titanic PCA and 分布圖</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
