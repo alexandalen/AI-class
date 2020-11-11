@@ -162,7 +162,7 @@ logit_model=sm.Logit(y,X)
 result= logit_model.fit()
 print(result.summary2())
 
-## The p-values for one variable is very high, therefore, we will remove them.
+#The p-values for one variable is very high, therefore, we will remove them.
 
 cols=['euribor3m', 'job_blue-collar', 'job_housemaid', 'marital_unknown', 'default_no', 'default_unknown', 
       'contact_cellular', 'contact_telephone', 'month_apr', 'month_aug', 'month_dec', 'month_jul', 'month_jun', 'month_mar', 
@@ -173,7 +173,7 @@ logit_model=sm.Logit(y,X)
 result= logit_model.fit()
 print(result.summary2())
 
-## Logistic Regression Model Fitting
+#Logistic Regression Model Fitting
 
 from sklearn.linear_model import LogisticRegression
 from sklearn import metrics
@@ -194,7 +194,7 @@ print(confusion_matrix)
 from sklearn.metrics import classification_report
 print(classification_report(y_test, y_pred))
 
-## ROC curve
+#ROC curve
 
 from sklearn.metrics import roc_auc_score
 from sklearn.metrics import roc_curve

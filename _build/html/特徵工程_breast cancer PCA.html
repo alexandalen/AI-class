@@ -120,11 +120,6 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="multioutput_face_completion.html#id1">
-   繪製完整臉譜
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="Regression_Boston housing.html">
    Boston 房價預測
   </a>
@@ -132,11 +127,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="ROC_AUC for Breast Cancer prediction.html">
    ROC_AUC for Breast Cancer predtction
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ROC_AUC for Breast Cancer prediction.html#confusion-matrix">
-   confusion matrix
   </a>
  </li>
  <li class="toctree-l1">
@@ -155,23 +145,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="行銷活動目標客戶分析.html#the-p-values-for-one-variable-is-very-high-therefore-we-will-remove-them">
-   The p-values for one variable is very high, therefore, we will remove them.
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="行銷活動目標客戶分析.html#logistic-regression-model-fitting">
-   Logistic Regression Model Fitting
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="行銷活動目標客戶分析.html#confusion-matrix">
    Confusion matrix
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="行銷活動目標客戶分析.html#roc-curve">
-   ROC curve
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -186,7 +161,12 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="假設檢定_president_height.html">
-   統計 (t-test)
+   假設檢定 (美國總統身高比較)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Titanic_predict_streamlit.html">
+   Titanic predict survived by Streamlit
   </a>
  </li>
 </ul>
@@ -882,17 +862,14 @@ dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Eigenvalues 
-[1.32713352e+01 5.73856054e+00 2.92910256e+00 1.94939166e+00
- 1.70207702e+00 1.20058910e+00 6.60394081e-01 4.67472966e-01
- 3.97555688e-01 3.15675096e-01 2.82602680e-01 2.73467091e-01
- 2.49401446e-01 1.41666106e-01 9.82319997e-02 7.37452876e-02
- 6.09774845e-02 4.97289863e-02 4.80734846e-02 1.32839577e-04
- 7.84983386e-04 1.57623823e-03 6.81271801e-03 8.08429261e-03
- 1.60888284e-02 1.69498635e-02 3.08382730e-02 2.74218966e-02
- 2.46100914e-02 2.27307735e-02]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+[1.38405398e+01 5.55264659e+00 2.66773977e+00 1.90369271e+00
+ 1.61366284e+00 1.17764777e+00 6.93525189e-01 4.80505969e-01
+ 4.12478587e-01 3.59999285e-01 2.77780497e-01 2.47883500e-01
+ 2.00373270e-01 1.59849622e-01 9.47421224e-02 7.99502842e-02
+ 5.52967871e-02 5.39224739e-02 4.42402888e-02 1.35546465e-04
+ 6.70971716e-04 1.34087501e-03 6.45914755e-03 7.62193720e-03
+ 1.14494717e-02 1.83387265e-02 2.08245833e-02 2.34164050e-02
+ 2.97977974e-02 2.95464511e-02]
 </pre></div>
 </div>
 </div>
@@ -945,36 +922,36 @@ dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matrix W:
- [[ 0.21846027 -0.23453833]
- [ 0.10763675 -0.05628062]
- [ 0.22742919 -0.21546522]
- [ 0.22037531 -0.2322571 ]
- [ 0.14190775  0.188722  ]
- [ 0.23895269  0.15354354]
- [ 0.25900366  0.06124207]
- [ 0.26110413 -0.03000039]
- [ 0.14103395  0.18761129]
- [ 0.0655415   0.36674959]
- [ 0.20551228 -0.11071432]
- [ 0.02435823  0.10184839]
- [ 0.20997402 -0.09287998]
- [ 0.199677   -0.15643803]
- [ 0.01541184  0.20821246]
- [ 0.17443115  0.22654216]
- [ 0.15810311  0.19255075]
- [ 0.18551305  0.12548083]
- [ 0.04545203  0.17021995]
- [ 0.10390449  0.28294323]
- [ 0.22757332 -0.22014093]
- [ 0.10672161 -0.03975679]
- [ 0.23639022 -0.2000703 ]
- [ 0.22412381 -0.22039626]
- [ 0.12403389  0.17718688]
- [ 0.20839593  0.14273239]
- [ 0.22881568  0.09443976]
- [ 0.25017845 -0.00520293]
- [ 0.12072948  0.132859  ]
- [ 0.1279361   0.28043304]]
+ [[-0.21545238 -0.23387356]
+ [-0.11024097 -0.0558216 ]
+ [-0.22403455 -0.21432782]
+ [-0.2172599  -0.2326245 ]
+ [-0.14526412  0.17956043]
+ [-0.23816771  0.14678706]
+ [-0.25397818  0.05112427]
+ [-0.25616019 -0.03877113]
+ [-0.13654847  0.19868147]
+ [-0.06581459  0.36911552]
+ [-0.20811653 -0.1016981 ]
+ [-0.01930214  0.09422565]
+ [-0.21556991 -0.07913357]
+ [-0.20777604 -0.15038037]
+ [-0.02183887  0.20550563]
+ [-0.17231613  0.23072711]
+ [-0.16825682  0.18474857]
+ [-0.19031346  0.11235481]
+ [-0.04394802  0.21523309]
+ [-0.10415235  0.27310605]
+ [-0.22473334 -0.22208852]
+ [-0.1080661  -0.04464382]
+ [-0.23350752 -0.20091909]
+ [-0.22035701 -0.22400317]
+ [-0.13071362  0.15717735]
+ [-0.21133247  0.14251688]
+ [-0.22808282  0.08709127]
+ [-0.24707017 -0.01301792]
+ [-0.11993195  0.16116769]
+ [-0.1335687   0.27689434]]
 </pre></div>
 </div>
 </div>
@@ -986,7 +963,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([11.9208997 , -7.41867676])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-2.6701608, -3.994536 ])
 </pre></div>
 </div>
 </div>
@@ -1064,7 +1041,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Logistic regression prediction: 95.61
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Logistic regression prediction: 92.98
 </pre></div>
 </div>
 </div>
@@ -1126,7 +1103,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Acc_random_forest score: 95.61
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Acc_random_forest score: 96.49
 </pre></div>
 </div>
 </div>

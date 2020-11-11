@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>假設檢定(總統身高) &#8212; 我的AI學習歷程檔案</title>
+    <title>假設檢定 (美國總統身高比較) &#8212; 我的AI學習歷程檔案</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
@@ -37,6 +37,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Titanic predict survived by Streamlit" href="Titanic_predict_streamlit.html" />
     <link rel="prev" title="Titanic PCA and 分布圖" href="特徵工程_Titanic PCA.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -119,11 +120,6 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="multioutput_face_completion.html#id1">
-   繪製完整臉譜
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="Regression_Boston housing.html">
    Boston 房價預測
   </a>
@@ -131,11 +127,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="ROC_AUC for Breast Cancer prediction.html">
    ROC_AUC for Breast Cancer predtction
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ROC_AUC for Breast Cancer prediction.html#confusion-matrix">
-   confusion matrix
   </a>
  </li>
  <li class="toctree-l1">
@@ -154,23 +145,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="行銷活動目標客戶分析.html#the-p-values-for-one-variable-is-very-high-therefore-we-will-remove-them">
-   The p-values for one variable is very high, therefore, we will remove them.
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="行銷活動目標客戶分析.html#logistic-regression-model-fitting">
-   Logistic Regression Model Fitting
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="行銷活動目標客戶分析.html#confusion-matrix">
    Confusion matrix
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="行銷活動目標客戶分析.html#roc-curve">
-   ROC curve
   </a>
  </li>
  <li class="toctree-l1">
@@ -185,7 +161,12 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   假設檢定(總統身高)
+   假設檢定 (美國總統身高比較)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Titanic_predict_streamlit.html">
+   Titanic predict survived by Streamlit
   </a>
  </li>
 </ul>
@@ -289,7 +270,7 @@
               <div>
                 
   <div class="section" id="id1">
-<h1>假設檢定(總統身高)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<h1>假設檢定 (美國總統身高比較)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -351,65 +332,89 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#last=d.tail(10)</span>
-<span class="n">last</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">10</span><span class="p">)[</span><span class="s1">&#39;height(cm)&#39;</span><span class="p">]</span>
-<span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">last</span><span class="p">)</span>
-<span class="c1">#print(last[[&#39;height(cm)&#39;]])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">last</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">last</span><span class="p">[[</span><span class="s1">&#39;height(cm)&#39;</span><span class="p">]])</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([183, 193, 182, 183, 177, 185, 188, 188, 182, 185], dtype=int64)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    height(cm)
+32         183
+33         193
+34         182
+35         183
+36         177
+37         185
+38         188
+39         188
+40         182
+41         185
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#early=df.head(len(df)-10)[&#39;height(cm)&#39;] </span>
-<span class="n">early</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">-</span><span class="mi">10</span><span class="p">)[</span><span class="s1">&#39;height(cm)&#39;</span><span class="p">]</span> 
-<span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">early</span><span class="p">)</span>
-<span class="c1">#print(early[[&#39;height(cm)&#39;]])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">early</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">-</span><span class="mi">10</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">early</span><span class="p">[[</span><span class="s1">&#39;height(cm)&#39;</span><span class="p">]])</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([189, 170, 189, 163, 183, 171, 185, 168, 173, 183, 173, 173, 175,
-       178, 183, 193, 178, 173, 174, 183, 183, 168, 170, 178, 182, 180,
-       183, 178, 182, 188, 175, 179], dtype=int64)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    height(cm)
+0          189
+1          170
+2          189
+3          163
+4          183
+5          171
+6          185
+7          168
+8          173
+9          183
+10         173
+11         173
+12         175
+13         178
+14         183
+15         193
+16         178
+17         173
+18         174
+19         183
+20         183
+21         168
+22         170
+23         178
+24         182
+25         180
+26         183
+27         178
+28         182
+29         188
+30         175
+31         179
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#s1=last[[&#39;height(cm)&#39;]]</span>
-<span class="c1">#s2=early[[&#39;height(cm)&#39;]]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s1</span><span class="o">=</span><span class="n">last</span><span class="p">[[</span><span class="s1">&#39;height(cm)&#39;</span><span class="p">]]</span>
+<span class="n">s2</span><span class="o">=</span><span class="n">early</span><span class="p">[[</span><span class="s1">&#39;height(cm)&#39;</span><span class="p">]]</span>
 
 <span class="c1">#sample=np.append(s1,s2)</span>
 <span class="c1">#print(sample)</span>
-
-<span class="c1">#t,p = stats.ttest_ind(s1,s2)</span>
-<span class="c1">#p1 = &#39;%f&#39; % (p/2) </span>
-<span class="c1">#print (&quot;t-statistic:&quot; + str(t))</span>
-<span class="c1">#print(&quot;p-value:&quot; + str(p1))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;older mean=</span><span class="si">{}</span><span class="s1">, newer mean=</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">early</span><span class="p">)),</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">last</span><span class="p">))))</span>
-<span class="n">tset</span><span class="p">,</span> <span class="n">pval</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">ttest_1samp</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">last</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">early</span><span class="p">)))</span>
-<span class="n">pval</span> <span class="o">=</span> <span class="n">pval</span> <span class="o">/</span> <span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;t-statistic=</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">tset</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;p-values=</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pval</span><span class="p">))</span>
-<span class="k">if</span> <span class="n">pval</span> <span class="o">&lt;</span> <span class="mf">0.05</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;有顯著差異&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;沒有顯著差異&quot;</span><span class="p">)</span>
+<span class="n">t</span><span class="p">,</span><span class="n">p</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span><span class="n">s2</span><span class="p">)</span>
+<span class="n">p1</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">p</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> 
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;t-statistic:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;p-value:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">p1</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>older mean=178.21875, newer mean=184.6
-t-statistic=4.637588590845474
-p-values=0.0006117187318706736
-有顯著差異
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>t-statistic:[2.69562114]
+p-value:0.005113
 </pre></div>
 </div>
 </div>
@@ -445,6 +450,7 @@ p-values=0.0006117187318706736
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="特徵工程_Titanic PCA.html" title="previous page">Titanic PCA and 分布圖</a>
+    <a class='right-next' id="next-link" href="Titanic_predict_streamlit.html" title="next page">Titanic predict survived by Streamlit</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

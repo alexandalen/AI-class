@@ -55,7 +55,7 @@ for name, estimator in ESTIMATORS.items():
     estimator.fit(X_train, y_train)
     y_test_predict[name] =estimator.predict(X_test)
 
-## 繪製完整臉譜
+#繪製完整臉譜
 
 image_shape=(64,64)
 

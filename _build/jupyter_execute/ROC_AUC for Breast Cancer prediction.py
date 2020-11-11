@@ -24,7 +24,7 @@ sclar=StandardScaler()
 X_train=sclar.fit_transform(X_train)
 X_test=sclar.transform(X_test)
 
-## confusion matrix
+#confusion matrix
 
 classifier = svm.SVC(kernel='linear', C=0.01).fit(X_train, y_train)
 
