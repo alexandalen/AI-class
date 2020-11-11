@@ -143,10 +143,13 @@ X=[i for i in data_final_vars if i not in y]
 from sklearn import datasets
 from sklearn.feature_selection import RFE
 from sklearn.linear_model import LogisticRegression
+import warnings
+
 logreg =LogisticRegression()
 
 rfe=RFE(logreg, 20)
 rfe=rfe.fit(os_data_X, os_data_y.values.ravel())
+warnings.filterwarnings("ignore")
 print(rfe.support_)
 print(rfe.ranking_)
 
@@ -185,7 +188,7 @@ logreg.fit(X_train, y_train)
 y_pred = logreg.predict(X_test)
 print('Accuracy of logistic regression classifier on test set: {:.2f}'.format(logreg.score(X_test, y_test)))
 
-## Confusion matrix
+#Confusion matrix
 
 from sklearn.metrics import confusion_matrix
 confusion_matrix= confusion_matrix(y_test, y_pred)
