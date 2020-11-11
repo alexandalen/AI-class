@@ -32,14 +32,8 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-from sklearn import datasets
-from sklearn.feature_selection import RFE
-from sklearn.linear_model import LogisticRegression
-logreg =LogisticRegression()
-
-rfe=RFE(logreg, 20)
-rfe=rfe.fit(os_data_X, os_data_y.values.ravel())
-print(rfe.support_)
-print(rfe.ranking_)
+['from sklearn import datasets', 'from sklearn.feature_selection import RFE', 'from sklearn.linear_model import LogisticRegression', 'import warnings', '']
+...
+['rfe=RFE(logreg, 20)', 'rfe=rfe.fit(os_data_X, os_data_y.values.ravel())', 'warnings.filterwarnings("ignore")', 'print(rfe.support_)', 'print(rfe.ranking_)']
 -------------------
 

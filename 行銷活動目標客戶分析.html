@@ -145,11 +145,6 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="#confusion-matrix">
-   Confusion matrix
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="特徵工程_breast cancer PCA.html">
    breast cancer PCA and 分布圖
   </a>
@@ -1806,10 +1801,13 @@ Proportion of subscription data in oversampled data is  0.5
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">datasets</span>
 <span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="kn">import</span> <span class="n">RFE</span>
 <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+
 <span class="n">logreg</span> <span class="o">=</span><span class="n">LogisticRegression</span><span class="p">()</span>
 
 <span class="n">rfe</span><span class="o">=</span><span class="n">RFE</span><span class="p">(</span><span class="n">logreg</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
 <span class="n">rfe</span><span class="o">=</span><span class="n">rfe</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">os_data_X</span><span class="p">,</span> <span class="n">os_data_y</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">rfe</span><span class="o">.</span><span class="n">support_</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">rfe</span><span class="o">.</span><span class="n">ranking_</span><span class="p">)</span>
 </pre></div>
@@ -2202,7 +2200,7 @@ Please also refer to the documentation for alternative solver options:
 =====================================================================
 Model:                Logit             Pseudo R-squared:  0.343     
 Dependent Variable:   y                 AIC:               46636.6256
-Date:                 2020-11-11 14:00  BIC:               46813.4697
+Date:                 2020-11-11 14:23  BIC:               46813.4697
 No. Observations:     51134             Log-Likelihood:    -23298.   
 Df Model:             19                LL-Null:           -35443.   
 Df Residuals:         51114             LLR p-value:       0.0000    
@@ -2264,7 +2262,7 @@ poutcome_success      2.4598   0.0662  37.1382 0.0000  2.3300  2.5896
 ==================================================================
 Model:               Logit            Pseudo R-squared: 0.343     
 Dependent Variable:  y                AIC:              46634.7531
-Date:                2020-11-11 14:00 BIC:              46802.7550
+Date:                2020-11-11 14:23 BIC:              46802.7550
 No. Observations:    51134            Log-Likelihood:   -23298.   
 Df Model:            18               LL-Null:          -35443.   
 Df Residuals:        51115            LLR p-value:      0.0000    
@@ -2344,9 +2342,13 @@ Please also refer to the documentation for alternative solver options:
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Confusion matrix</span>
+</pre></div>
 </div>
-<div class="section" id="confusion-matrix">
-<h1>Confusion matrix<a class="headerlink" href="#confusion-matrix" title="Permalink to this headline">¶</a></h1>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span>
