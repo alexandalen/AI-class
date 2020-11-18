@@ -144,11 +144,6 @@
    行銷活動目標客戶分析
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="行銷活動目標客戶分析.html#confusion-matrix">
-   Confusion matrix
-  </a>
- </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    breast cancer PCA and 分布圖
@@ -167,6 +162,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="Titanic_predict_streamlit.html">
    Titanic predict survived by Streamlit
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="COVID19_analysis.html">
+   COVID-19 (mortality and recovery analysis and EDA)
   </a>
  </li>
 </ul>
@@ -862,14 +862,14 @@ dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Eigenvalues 
-[1.38405398e+01 5.55264659e+00 2.66773977e+00 1.90369271e+00
- 1.61366284e+00 1.17764777e+00 6.93525189e-01 4.80505969e-01
- 4.12478587e-01 3.59999285e-01 2.77780497e-01 2.47883500e-01
- 2.00373270e-01 1.59849622e-01 9.47421224e-02 7.99502842e-02
- 5.52967871e-02 5.39224739e-02 4.42402888e-02 1.35546465e-04
- 6.70971716e-04 1.34087501e-03 6.45914755e-03 7.62193720e-03
- 1.14494717e-02 1.83387265e-02 2.08245833e-02 2.34164050e-02
- 2.97977974e-02 2.95464511e-02]
+[1.34810133e+01 5.60503212e+00 2.82352401e+00 1.94759532e+00
+ 1.65029841e+00 1.20842481e+00 6.88307310e-01 4.80112059e-01
+ 4.29476545e-01 3.54512113e-01 2.93175683e-01 2.42769510e-01
+ 2.29006836e-01 1.48437707e-01 8.99084189e-02 7.38530370e-02
+ 5.67851784e-02 5.41119474e-02 4.81731319e-02 1.34077774e-04
+ 7.53900271e-04 1.49495977e-03 6.25228032e-03 7.63758600e-03
+ 1.55530737e-02 1.64004245e-02 3.27637587e-02 3.02653501e-02
+ 2.41797078e-02 2.61266995e-02]
 </pre></div>
 </div>
 </div>
@@ -922,36 +922,36 @@ dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matrix W:
- [[-0.21545238 -0.23387356]
- [-0.11024097 -0.0558216 ]
- [-0.22403455 -0.21432782]
- [-0.2172599  -0.2326245 ]
- [-0.14526412  0.17956043]
- [-0.23816771  0.14678706]
- [-0.25397818  0.05112427]
- [-0.25616019 -0.03877113]
- [-0.13654847  0.19868147]
- [-0.06581459  0.36911552]
- [-0.20811653 -0.1016981 ]
- [-0.01930214  0.09422565]
- [-0.21556991 -0.07913357]
- [-0.20777604 -0.15038037]
- [-0.02183887  0.20550563]
- [-0.17231613  0.23072711]
- [-0.16825682  0.18474857]
- [-0.19031346  0.11235481]
- [-0.04394802  0.21523309]
- [-0.10415235  0.27310605]
- [-0.22473334 -0.22208852]
- [-0.1080661  -0.04464382]
- [-0.23350752 -0.20091909]
- [-0.22035701 -0.22400317]
- [-0.13071362  0.15717735]
- [-0.21133247  0.14251688]
- [-0.22808282  0.08709127]
- [-0.24707017 -0.01301792]
- [-0.11993195  0.16116769]
- [-0.1335687   0.27689434]]
+ [[-0.2211519  -0.22758482]
+ [-0.10036839 -0.08687273]
+ [-0.22917365 -0.20900952]
+ [-0.22301604 -0.22497867]
+ [-0.14518081  0.18595545]
+ [-0.23856272  0.1497597 ]
+ [-0.25692635  0.06086311]
+ [-0.26017889 -0.03337118]
+ [-0.14316298  0.18945578]
+ [-0.05979903  0.37068388]
+ [-0.2044679  -0.10866731]
+ [-0.02006018  0.07715496]
+ [-0.20989516 -0.08919238]
+ [-0.20050238 -0.151459  ]
+ [-0.01163426  0.20402082]
+ [-0.17084876  0.23495727]
+ [-0.15076737  0.20532195]
+ [-0.18305648  0.14421462]
+ [-0.04508787  0.18860728]
+ [-0.10253128  0.28885392]
+ [-0.22871404 -0.21613993]
+ [-0.10173129 -0.07634048]
+ [-0.23734864 -0.19484195]
+ [-0.22554284 -0.21526799]
+ [-0.12454021  0.16767628]
+ [-0.21053042  0.13144826]
+ [-0.23055585  0.09386529]
+ [-0.2490281  -0.00560693]
+ [-0.12667107  0.13359244]
+ [-0.13230752  0.27358946]]
 </pre></div>
 </div>
 </div>
@@ -963,7 +963,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-2.6701608, -3.994536 ])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2.46091833, 3.29802836])
 </pre></div>
 </div>
 </div>
@@ -1041,7 +1041,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Logistic regression prediction: 92.98
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Logistic regression prediction: 97.37
 </pre></div>
 </div>
 </div>
@@ -1103,7 +1103,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Acc_random_forest score: 96.49
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Acc_random_forest score: 98.25
 </pre></div>
 </div>
 </div>
