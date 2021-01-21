@@ -27,3 +27,9 @@
 - file: time_series_covid19_confirmed_global
 - file: time_series_covid19_deaths_global
 - file: time_series_covid19_recovered_global
+- file: Bank_Customer_Churn_Prediction
+- file: Churn_Modelling
+- file: Brain_tumor_MRI_analysis
+- file: COVID-19_chest_X_ray_analysis
+- file: kernel_breast_cancer_practice
+- file: kernal_breast_cancer_data
