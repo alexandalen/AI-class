@@ -1,0 +1,469 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Python open FASTQ form &#8212; 我的AI學習歷程檔案</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-dropdown.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="kernel breast cancer practice" href="kernel_breast_cancer_practice.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">我的AI學習歷程檔案</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="content.html">
+   Content in Jupyter Book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Boston Housing.html">
+   Boston Housing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Equations_input.html">
+   方程式語法 (Input)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Equations_tkinter.html">
+   方程式語法 (tkinter)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Cat_Classification.html">
+   Cat_Classification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="classfication_Wine.html">
+   classfication_Wine
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Keras_fashion_minst辨識.html">
+   Keras_fashion_minst辨識
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="multioutput_face_completion.html">
+   multioutput_face_completion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Regression_Boston housing.html">
+   Boston 房價預測
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ROC_AUC for Breast Cancer prediction.html">
+   ROC_AUC for Breast Cancer predtction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ROC_AUC for Breast Cancer prediction.html#roc-curve">
+   ROC curve
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Titanic_survive_prediction.html">
+   Titanic survive prediction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="行銷活動目標客戶分析.html">
+   行銷活動目標客戶分析
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="特徵工程_breast cancer PCA.html">
+   breast cancer PCA and 分布圖
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="特徵工程_Titanic PCA.html">
+   Titanic PCA and 分布圖
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="假設檢定_president_height.html">
+   假設檢定 (美國總統身高比較)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Titanic_predict_streamlit.html">
+   Titanic predict survived by Streamlit
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="COVID19_analysis.html">
+   COVID-19 (mortality and recovery analysis and EDA)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Bank_Customer_Churn_Prediction.html">
+   Bank Customer Churn Prediction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Brain_tumor_MRI_analysis.html">
+   Brain tumor MRI analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="COVID-19_chest_X_ray_analysis.html">
+   COVID-19 chest X ray practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="kernel_breast_cancer_practice.html">
+   kernel breast cancer practice
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Python open FASTQ form
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Python_開啟_FASTQ.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Python_開啟_FASTQ.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/Python_開啟_FASTQ.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="python-open-fastq-form">
+<h1>Python open FASTQ form<a class="headerlink" href="#python-open-fastq-form" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">fastQ格式:</span>
+<span class="sd">@SEQ_ID</span>
+<span class="sd"> GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT</span>
+<span class="sd"> +</span>
+<span class="sd"> !&#39;&#39;((((+))%%%++)(%%%%).1-+&#39;&#39;))**55CCF&gt;&gt;&gt;&gt;&gt;&gt;CCCCCCC65</span>
+<span class="sd"> </span>
+<span class="sd">第一行：@SEQ_ID</span>
+<span class="sd">以@開頭，之後為序列的識別碼以及描述資訊（與FASTA格式的描述行類似） (通常是用的定序儀名稱)</span>
+<span class="sd">第二行：GATTTGGGGTTCAA……..</span>
+<span class="sd">為序列資訊</span>
+<span class="sd">第三行：+</span>
+<span class="sd">以+開頭，之後可以再次加上序列的標識及描述資訊（可選）</span>
+<span class="sd">第四行：!”((((+))%%%++)(%%%%).1-+”))**…..</span>
+<span class="sd">為品質得分 Quality 資訊，與第二行的序列相對應，長度必須與第二行相同，記錄定序時讀取序列的品質得分，以ASCII字元方式記錄。</span>
+<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="k">def</span> <span class="nf">readFastq</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="n">sequences</span><span class="o">=</span><span class="p">[]</span> <span class="c1">#用來存放讀出的序列</span>
+    <span class="n">qualities</span><span class="o">=</span><span class="p">[]</span> <span class="c1">#用來存放讀出的quality </span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">fh</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span> <span class="c1">#用.readline讀出第一行資料</span>
+            <span class="n">seq</span><span class="o">=</span><span class="n">fh</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span> <span class="c1">#用.readline讀出下一行資料，這行是要的序列 最用後 .rstrip()刪除不要的換行與空白</span>
+            <span class="n">fh</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span> <span class="c1">#用.readline讀出再下一行資料，這行是不要的 + 那行</span>
+            <span class="n">qual</span><span class="o">=</span><span class="n">fh</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span> <span class="c1"># 用.readline讀出下一行資料，這行是要的quality 最用後 .rstrip()刪除不要的換行與空白</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span> <span class="o">==</span><span class="mi">0</span><span class="p">:</span> <span class="c1">#當讀到序列資料長度是零的時候，就表示檔案內容已經讀完了，所以執行 break</span>
+                <span class="k">break</span>    
+            <span class="n">sequences</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span>
+            <span class="n">qualities</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">qual</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">sequences</span><span class="p">,</span> <span class="n">qualities</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># quality 的代碼轉換 (ord( )與chr( )進行ASCII的數字與字母轉換)</span>
+<span class="c1">#方便之後每次進行 Q的ASCII代碼 與 Q數值的互相轉換</span>
+<span class="k">def</span> <span class="nf">QtoPhred33</span><span class="p">(</span><span class="n">Q</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">chr</span><span class="p">(</span><span class="n">Q</span><span class="o">+</span><span class="mi">33</span><span class="p">)</span> <span class="c1">#將 ASCII代碼 轉為 Q數值</span>
+<span class="k">def</span> <span class="nf">Phred33ToQ</span><span class="p">(</span><span class="n">qual</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">ord</span><span class="p">(</span><span class="n">qual</span><span class="p">)</span><span class="o">-</span><span class="mi">33</span> <span class="c1">#將 Q數值 轉為 ASCII代碼 </span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">Phred33ToQ</span><span class="p">(</span><span class="s1">&#39;!&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">QtoPhred33</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+!
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#用readFastq讀取檔案，並將讀出的序列與Q值分別放到 seqs與 quals兩個變數中</span>
+<span class="n">seqs</span><span class="p">,</span> <span class="n">quals</span> <span class="o">=</span> <span class="n">readFastq</span><span class="p">(</span><span class="s1">&#39;NTUH-1-050.DNA.noHomo.1.fq&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">seqs</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">quals</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">seqs</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">quals</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ACAAAGATATAAAAAAAAATCAAACATAGACACAACCAAATAAATGATAACAAAAAAAAAATCAACAAAACAAAAAGAATATTCAAATATAAATACAAAA
+ah``agaVV_aaV\V`]`aVeaVahXV`h`e]V]ahVPYPcaaJbh_V`]eaVVVVa^W`VVhMVV^]H_VVaVaHS]`VLbcV]Z^V_WVVa`VVV\aV
+100
+100
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#看這一行的Q都是代表多大的可信度，使用剛剛定義的函式 Phred33ToQ 將Quality符號(Phred33)轉為數字(Q)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">quals</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">Phred33ToQ</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>64,71,63,63,64,70,64,53,53,62,64,64,53,59,53,63,60,63,64,53,68,64,53,64,71,55,53,63,71,63,68,60,53,60,64,71,53,47,56,47,66,64,64,41,65,71,62,53,63,60,68,64,53,53,53,53,64,61,54,63,53,53,71,44,53,53,61,60,39,62,53,53,64,53,64,39,50,60,63,53,43,65,66,53,60,57,61,53,62,54,53,53,64,63,53,53,53,59,64,53,
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#利用 matplotlib 作圖 看整個fastq檔案quality分數的分布</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;seaborn&#39;</span><span class="p">)</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="n">hist</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">80</span>  <span class="c1">#根據quality做一個相對應個數0的 list</span>
+<span class="k">for</span> <span class="n">qual</span> <span class="ow">in</span> <span class="n">quals</span><span class="p">:</span> <span class="c1"># 一條條讀入 剛剛讀出的 quals 內所有Q的資料</span>
+    <span class="k">for</span> <span class="n">phred</span> <span class="ow">in</span> <span class="n">qual</span><span class="p">:</span> <span class="c1"># 一個個讀出 每條quality資料的每個quality</span>
+        <span class="n">q</span><span class="o">=</span> <span class="n">Phred33ToQ</span><span class="p">(</span><span class="n">phred</span><span class="p">)</span> <span class="c1"># 將每個值，用之前做的def(Phred33ToQ) 轉換為數值</span>
+        <span class="n">hist</span><span class="p">[</span><span class="n">q</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># 計算個有各有哪些q值被讀出，看讀出的 q 是多少，增加計數到剛剛做的相對應個數0的list中</span>
+
+<span class="c1">#做出bar圖</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">hist</span><span class="p">)),</span> <span class="n">hist</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Quality Distribution&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Q value&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Accumulation of Count&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Python_開啟_FASTQ_5_0.png" src="_images/Python_開啟_FASTQ_5_0.png" />
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="kernel_breast_cancer_practice.html" title="previous page">kernel breast cancer practice</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Lin yung lun<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    
+  </body>
+</html>
