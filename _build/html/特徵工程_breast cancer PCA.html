@@ -189,6 +189,11 @@
    kernel breast cancer practice
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Python_開啟_FASTQ.html">
+   Python open FASTQ form
+  </a>
+ </li>
 </ul>
 
 </nav>
@@ -882,14 +887,14 @@ dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Eigenvalues 
-[1.35454862e+01 5.63116370e+00 2.77124037e+00 2.00841803e+00
- 1.62611448e+00 1.18860168e+00 6.86358318e-01 4.78602098e-01
- 4.14932349e-01 3.37734065e-01 2.76544506e-01 2.68831547e-01
- 1.96643726e-01 1.53506889e-01 1.00991333e-01 7.47033018e-02
- 5.91489863e-02 4.96185741e-02 4.64363088e-02 1.28020977e-04
- 6.71575482e-04 1.41462788e-03 6.57038996e-03 7.16930593e-03
- 1.13208024e-02 1.68634424e-02 3.03951109e-02 2.21267223e-02
- 2.80098260e-02 2.63330246e-02]
+[1.31563535e+01 5.89769715e+00 2.85050284e+00 1.96165001e+00
+ 1.66877136e+00 1.17502165e+00 6.84617256e-01 4.83470566e-01
+ 4.05350562e-01 3.62075485e-01 2.99234011e-01 2.60148306e-01
+ 2.23232663e-01 1.52012164e-01 9.16756040e-02 7.24520526e-02
+ 6.17877986e-02 5.39539704e-02 4.98011374e-02 3.07651830e-02
+ 2.76781139e-02 2.61908162e-02 2.37214983e-02 1.38612752e-04
+ 7.64384316e-04 1.45801189e-03 6.93132237e-03 8.01041503e-03
+ 1.54769584e-02 1.51359373e-02]
 </pre></div>
 </div>
 </div>
@@ -942,36 +947,36 @@ dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matrix W:
- [[ 0.21968246 -0.22976702]
- [ 0.10755853 -0.05819398]
- [ 0.22803553 -0.21056136]
- [ 0.22061456 -0.23042556]
- [ 0.1414794   0.19527996]
- [ 0.23808668  0.16022009]
- [ 0.25707058  0.05214692]
- [ 0.25859277 -0.03151649]
- [ 0.14347801  0.1894974 ]
- [ 0.0611971   0.36846689]
- [ 0.20230213 -0.13094031]
- [ 0.02520755  0.06231112]
- [ 0.20884889 -0.10703599]
- [ 0.1987727  -0.1688105 ]
- [ 0.01134759  0.19815006]
- [ 0.17283016  0.22407358]
- [ 0.16737607  0.17487806]
- [ 0.18424807  0.10871301]
- [ 0.04960415  0.17068038]
- [ 0.10926371  0.27903515]
- [ 0.22661783 -0.21734257]
- [ 0.106568   -0.04635811]
- [ 0.2356853  -0.19569517]
- [ 0.22208958 -0.22067675]
- [ 0.12884079  0.18236066]
- [ 0.20930891  0.15687944]
- [ 0.22728519  0.09925057]
- [ 0.24801     0.00169621]
- [ 0.12643395  0.15134049]
- [ 0.13158393  0.28344477]]
+ [[ 0.21955476  0.23095053]
+ [ 0.11096551  0.05193572]
+ [ 0.22823104  0.21296228]
+ [ 0.22203041  0.22775952]
+ [ 0.14222418 -0.18714098]
+ [ 0.23935046 -0.1513773 ]
+ [ 0.25915272 -0.06414928]
+ [ 0.26288115  0.03349626]
+ [ 0.1328452  -0.19854929]
+ [ 0.06277614 -0.36174899]
+ [ 0.20256276  0.10985494]
+ [ 0.01001722 -0.10873161]
+ [ 0.20709377  0.09505487]
+ [ 0.20004004  0.1532174 ]
+ [ 0.00492063 -0.19988018]
+ [ 0.16706021 -0.23717851]
+ [ 0.14654062 -0.19835861]
+ [ 0.1807092  -0.12409663]
+ [ 0.02892824 -0.18028746]
+ [ 0.09449664 -0.2875027 ]
+ [ 0.22967551  0.2149076 ]
+ [ 0.11395063  0.03140548]
+ [ 0.23828576  0.1957029 ]
+ [ 0.22707359  0.21327671]
+ [ 0.13346258 -0.17289444]
+ [ 0.21201691 -0.14547607]
+ [ 0.23066612 -0.10437285]
+ [ 0.25294707  0.00708988]
+ [ 0.12400767 -0.14724566]
+ [ 0.13209704 -0.27590765]]
 </pre></div>
 </div>
 </div>
@@ -983,7 +988,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-3.21559463, -0.73624519])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-3.89229448, -4.30266289])
 </pre></div>
 </div>
 </div>
@@ -1061,7 +1066,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Logistic regression prediction: 93.86
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Logistic regression prediction: 92.98
 </pre></div>
 </div>
 </div>
@@ -1123,7 +1128,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Acc_random_forest score: 96.49
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Acc_random_forest score: 93.86
 </pre></div>
 </div>
 </div>
