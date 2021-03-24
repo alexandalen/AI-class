@@ -3,35 +3,35 @@
   sections:
     - file: markdown
     - file: notebooks
-- file: Boston Housing
-- file: Equations_input
-- file: Equations_tkinter
-- file: Cat_Classification
-- file: classfication_Wine
-- file: Keras_fashion_minst辨識
-- file: multioutput_face_completion
-- file: Regression_Boston housing
+- file: Python_開啟_FASTQ
+- file: NTUH-1-050.DNA.noHomo.1.fq
+- file: Brain_tumor_MRI_analysis
+- file: COVID-19_chest_X_ray_analysis
+- file: kernel_breast_cancer_practice
+- file: COVID19_analysis
 - file: ROC_AUC for Breast Cancer prediction
 - file: Titanic_survive_prediction
+- file: Titanic_predict_streamlit
+- file: Regression_Boston housing
+- file: Bank_Customer_Churn_Prediction
 - file: 行銷活動目標客戶分析
 - file: 特徵工程_breast cancer PCA
 - file: 特徵工程_Titanic PCA
 - file: 假設檢定_president_height
 - file: president_heights
-- file: Titanic_predict_streamlit
 - file: model
 - file: std
 - file: banking
-- file: COVID19_analysis
+- file: multioutput_face_completion
 - file: new
 - file: time_series_covid19_confirmed_global
 - file: time_series_covid19_deaths_global
 - file: time_series_covid19_recovered_global
-- file: Bank_Customer_Churn_Prediction
 - file: Churn_Modelling
-- file: Brain_tumor_MRI_analysis
-- file: COVID-19_chest_X_ray_analysis
-- file: kernel_breast_cancer_practice
+- file: Cat_Classification
+- file: classfication_Wine
+- file: Keras_fashion_minst辨識
 - file: kernal_breast_cancer_data
-- file: Python_開啟_FASTQ
-- file: NTUH-1-050.DNA.noHomo.1.fq
+- file: Equations_input
+- file: Equations_tkinter
+- file: Boston Housing
